@@ -40,7 +40,11 @@ export default function ColorCard({ color }) {
               className="color_button"
               type="buton"
               style={{ backgroundColor: color.hex }}
-              onClick={() => navigator.clipboard.writeText(color.hex)}
+              onClick={() =>
+                navigator.clipboard.writeText(color.hex).then(() => {
+                  alert("yippie! you coppied the color");
+                })
+              }
             >
               {color.hex}
             </button>

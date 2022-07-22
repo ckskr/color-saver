@@ -1,5 +1,6 @@
 import "./App.css";
 import ColorCard from "./components/ColorCard.js";
+import AddColor from "./components/AddColor";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
         <h1 className="h1">welcome to my color saver</h1>
         <div>
           <ColorCard />
+          <hr />
+          <AddColor />
         </div>
       </section>
     </div>
