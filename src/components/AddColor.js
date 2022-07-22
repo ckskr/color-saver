@@ -25,6 +25,7 @@ export default function AddColor() {
         <div className="add_color_input">
           <input
             required
+            placeholder="insert hex code"
             type="text"
             value={inputValue}
             onChange={(event) => {
@@ -55,12 +56,17 @@ export default function AddColor() {
                   <button
                     className="add_color_button"
                     type="button"
-                    style={{ backgroundColor: colorItem.hex }}
-                    onClick={() => navigator.clipboard.writeText(colorItem.hex)}
+                    style={{ color: colorItem.hex }}
+                    onClick={() =>
+                      navigator.clipboard.writeText(colorItem.hex).then(() => {
+                        alert("yieha. you copied this beautiful color");
+                      })
+                    }
                   >
                     {colorItem.hex}
                   </button>
                   <button
+                    className="delete_button"
                     type="button"
                     onClick={() => {
                       setColor(
@@ -68,7 +74,28 @@ export default function AddColor() {
                       );
                     }}
                   >
-                    x
+                    delete
+                  </button>
+                  <button
+                    className="edit_button"
+                    type="button"
+                    onClick={() => {
+                      <div className="add_color_input">
+                        <input
+                          type="text"
+                          value={color.hex}
+                          onChange={(event) => {
+                            color.map((newColor) => {
+                              return newColor.id === color.id
+                                ? { ...newColor, color: event.target.value }
+                                : newColor;
+                            });
+                          }}
+                        />{" "}
+                      </div>;
+                    }}
+                  >
+                    edit
                   </button>
                 </p>
               </div>

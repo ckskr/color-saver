@@ -1,5 +1,5 @@
 .form {
-  padding-top: 100px;
+  padding-top: 10px;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -19,6 +19,7 @@
 .add_color_card {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .add_card_content {
@@ -49,4 +50,37 @@
   gap: 20px;
   justify-content: center;
   margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.delete_button {
+  border-radius: 5px;
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  background: white;
+  box-shadow: 0.5px 0.5px gray;
+}
+
+.delete_button:hover {
+  background-color: lightcoral;
+  color: white;
+}
+
+.edit_button {
+  border-radius: 5px;
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  background: white;
+}
+
+.edit_button:hover {
+  background-color: lightseagreen;
+  color: white;
+  box-shadow: 0.5px 0.5px gray;
 }

@@ -6,10 +6,11 @@ function App() {
   return (
     <div className="App">
       <section className="app_section">
-        <h1 className="h1">welcome to my color saver</h1>
+        <h2 className="h2">Pick your favorit color from my palette</h2>
         <div>
           <ColorCard />
           <hr />
+          <h2 className="h2">Save your favorite colors</h2>
           <AddColor />
         </div>
       </section>
